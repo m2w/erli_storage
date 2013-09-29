@@ -1,0 +1,11 @@
+%%-*- mode: erlang -*-
+{application, erli_storage,
+ [{description, "Storage backend for the erli URL shortener."},
+  {vsn, "0.1"},
+  {modules, [erli_storage_app,
+	     erli_storage_sup,
+	     erli_storage_backend,
+	     erli_storage_mnesia]},
+  {registered, []},
+  {applications, [kernel, stdlib, mnesia]},
+  {mod, {erli_storage_app, []}}]}.
